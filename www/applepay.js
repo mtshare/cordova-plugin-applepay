@@ -10,7 +10,17 @@ var ApplePay = {
         );
     },
     
-    setMerchantId: function(successCallback, errorCallback, merchantId) {
+    setStripePublishableKey: function(publishableKey, successCallback, errorCallback) {
+        cordova.exec(
+            successCallback,
+            errorCallback,
+            'ApplePay',
+            'setStripePublishableKey',
+            [publishableKey]
+        );
+    },
+	
+    setMerchantId: function(merchantId, successCallback, errorCallback) {
         cordova.exec(
             successCallback,
             errorCallback,
@@ -20,13 +30,13 @@ var ApplePay = {
         );
     },
 
-    getStripeToken: function(successCallback, errorCallback, amount, name, cur) {
+    getStripeToken: function(amount, name, currency, successCallback, errorCallback) {
         cordova.exec(
             successCallback,
             errorCallback,
             'ApplePay',
             'getStripeToken',
-            [amount, name, cur]
+            [amount, name, currency]
         );
     }
     

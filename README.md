@@ -22,6 +22,7 @@ cordova plugin add https://github.com/mtshare/cordova-plugin-applepay  \
 
 - ApplePay.getAllowsApplePay
 - ApplePay.setMerchantId
+- ApplePay.setStripePublishableKey
 - ApplePay.getStripeToken
 
 #### ApplePay.getAllowsApplePay
@@ -37,7 +38,15 @@ ApplePay.getAllowsApplePay(successCallback, errorCallback);
 Set your Apple-given merchant ID. This overrides the value obtained from **ApplePayMerchant** in **Info.plist**.
 
 ```js
-ApplePay.setMerchantId(successCallback, errorCallback, 'merchant.apple.test');
+ApplePay.setMerchantId('merchant.apple.test', successCallback, errorCallback);
+```
+
+#### ApplePay.setStripePublishableKey
+
+Set your Stripe Publishable Key. This overrides the value obtained from **StripePublishableKey** in **Info.plist**.
+
+```js
+ApplePay.setMerchantId('pk_test_stripekey', successCallback, errorCallback);
 ```
 
 #### ApplePay.getStripeToken
@@ -48,7 +57,7 @@ Request a stripe token for an Apple Pay card.
 - currency (uppercase string)
 
 ```js
-ApplePay.getStripeToken(successCallback, errorCallback, amount, description, currency);
+ApplePay.getStripeToken(amount, description, currency, successCallback, errorCallback);
 ```
 
 ##### Response

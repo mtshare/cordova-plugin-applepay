@@ -54,24 +54,16 @@
         return [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
     }
     
-    PKPaymentRequest *request = [Stripe paymentRequestWithMerchantIdentifier:merchantId];
-    
-    // Configure a dummy request
-    NSString *label = @"Premium Llama Food";
-    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:@"10.00"];
-    request.paymentSummaryItems = @[
-                                    [PKPaymentSummaryItem summaryItemWithLabel:label
-                                                                        amount:amount]
-                                    ];
-    
-    if ([Stripe canSubmitPaymentRequest:request]) {
+    NSArray *paymentNetworks = @[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel];
+    if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:paymentNetworks]) {
+        //  Pay is available!
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                                    messageAsString:@"user has apple pay"];
+                                                    messageAsString:@"User has Apple Pay"];
         [self.commandDelegate sendPluginResult:result
                                     callbackId:command.callbackId];
     } else {
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                    messageAsString:@"user does not have apple pay"];
+                                                    messageAsString:@"User does not have Apple Pay"];
         [self.commandDelegate sendPluginResult:result
                                     callbackId:command.callbackId];
     }

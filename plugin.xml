@@ -11,8 +11,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <repo>git@github.com:fan-si/cordova-plugin-applepay.git</repo>
 	
 		
-	<preference name="STRIPE_PUBLISHABLE_KEY" />
-	<preference name="APPLE_PAY_MERCHANT" />
+	<preference name="STRIPE_PUBLISHABLE_KEY" default=" " />
+	<preference name="APPLE_PAY_MERCHANT" default=" " />
 	
     <engines>
         <engine name="cordova-ios" version=">=3.5.0" />

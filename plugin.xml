@@ -3,16 +3,13 @@
 xmlns:rim="http://www.blackberry.com/ns/widgets"
 xmlns:android="http://schemas.android.com/apk/res/android"
            id="cordova-plugin-applepay"
-      version="0.0.1">
+      version="1.0.0">
 
     <name>ApplePay</name>
     <description>Implements Stripe/ApplePay Stuff.</description>
     <keywords>cordova,payment,apple,pay,stripe</keywords>
-    <repo>git@github.com:fan-si/cordova-plugin-applepay.git</repo>
+    <repo>git@github.com:mtshare/cordova-plugin-applepay.git</repo>
 	
-		
-	<preference name="STRIPE_PUBLISHABLE_KEY" default=" " />
-	<preference name="APPLE_PAY_MERCHANT" default=" " />
 	
     <engines>
         <engine name="cordova-ios" version=">=3.5.0" />
@@ -32,14 +29,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	        </feature>
         </config-file>
 		
+		<preference name="STRIPE_PUBLISHABLE_KEY" default=" " />
 		<config-file target="*-Info.plist" parent="StripePublishableKey">
             <string>$STRIPE_PUBLISHABLE_KEY</string>
         </config-file>
-		
+
+		<preference name="APPLE_PAY_MERCHANT" default=" " />
 		<config-file target="*-Info.plist" parent="ApplePayMerchant">
             <string>$APPLE_PAY_MERCHANT</string>
         </config-file>
-		
         <config-file target="*.entitlements" parent="com.apple.developer.in-app-payments">
 			<array>
 				<string>$APPLE_PAY_MERCHANT</string>

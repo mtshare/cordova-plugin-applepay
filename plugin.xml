@@ -19,7 +19,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </engines>
 
     <platform name="ios">
-
         <js-module src="www/applepay.js" name="applepay">
             <clobbers target="ApplePay" />
         </js-module>
@@ -48,11 +47,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         </config-file>
 		
 		<framework src="src/ios/Stripe.framework" custom="true" />
-
         <framework src="AddressBook.framework" />
         <framework src="PassKit.framework" />
         <framework src="Foundation.framework" />
         <framework src="Security.framework" />
     </platform>
-    
 </plugin>

@@ -92,7 +92,6 @@
     NSString *countryCode = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
     
     PKPaymentRequest *paymentRequest = [Stripe paymentRequestWithMerchantIdentifier:merchantId];
-    paymentRequest.merchantIdentifier = merchantId;
     paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
     paymentRequest.supportedNetworks = @[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel];
     paymentRequest.countryCode = countryCode;

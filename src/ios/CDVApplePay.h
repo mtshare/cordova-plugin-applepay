@@ -3,10 +3,7 @@
 #import <PassKit/PassKit.h>
 
 
-@interface CDVApplePay : CDVPlugin
-<
-PKPaymentAuthorizationViewControllerDelegate
->
+@interface CDVApplePay : CDVPlugin <PKPaymentAuthorizationViewControllerDelegate>
 {
     NSString *merchantId;
     NSString *callbackId;

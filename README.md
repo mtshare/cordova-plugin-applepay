@@ -46,7 +46,7 @@ ApplePay.setMerchantId('merchant.apple.test', successCallback, errorCallback);
 Set your Stripe Publishable Key. This overrides the value obtained from **StripePublishableKey** in **Info.plist**.
 
 ```js
-ApplePay.setMerchantId('pk_test_stripekey', successCallback, errorCallback);
+ApplePay.setStripePublishableKey('pk_test_stripekey', successCallback, errorCallback);
 ```
 
 #### ApplePay.getStripeToken

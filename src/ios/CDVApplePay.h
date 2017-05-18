@@ -6,6 +6,7 @@
 @interface CDVApplePay : CDVPlugin <PKPaymentAuthorizationViewControllerDelegate>
 {
     NSString *merchantId;
+    NSString *publishableKey;
     NSString *callbackId;
 }
 

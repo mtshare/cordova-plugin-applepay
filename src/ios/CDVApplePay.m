@@ -12,27 +12,54 @@
 - (void) pluginInitialize {
     [super pluginInitialize];
     
+#ifdef DEBUG
     NSLog(@"Initialize Apple Pay Plugin");
-    NSString * StripePublishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripePublishableKey"];
+#endif
+    
+    publishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripePublishableKey"];
+    if ([StripePublishableKey length]) {
+        [Stripe setDefaultPublishableKey:publishableKey];
+    }
     merchantId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"ApplePayMerchant"];
-    [Stripe setDefaultPublishableKey:StripePublishableKey];
 }
+
 
 - (void)dealloc
 {
-    
 }
 
 - (void)onReset
 {
-    
 }
+
+
+
+/*
+ * Set Stripe Publishable Key via Javascript
+ */
+- (void)setStripePublishableKey:(CDVInvokedUrlCommand*)command
+{
+    publishableKey = [command.arguments objectAtIndex:0];
+    [Stripe setDefaultPublishableKey:publishableKey];
+    
+#ifdef DEBUG
+    NSLog(@"ApplePay set Stripe publishable key %@", publishableKey);
+#endif
+}
+
+
 
 - (void)setMerchantId:(CDVInvokedUrlCommand*)command
 {
     merchantId = [command.arguments objectAtIndex:0];
+    
+#ifdef DEBUG
     NSLog(@"ApplePay set merchant id to %@", merchantId);
+#endif
 }
+
+
+
 
 - (void)getAllowsApplePay:(CDVInvokedUrlCommand*)command
 {
@@ -61,6 +88,10 @@
         [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
     }
 }
+
+
+
+
 
 - (void)getStripeToken:(CDVInvokedUrlCommand*)command
 {
@@ -101,11 +132,15 @@
     
 }
 
+
+
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller
                        didAuthorizePayment:(PKPayment *)payment
                                 completion:(void (^)(PKPaymentAuthorizationStatus))completion {
     [self handlePaymentAuthorizationWithPayment:payment completion:completion];
 }
+
+
 
 - (void)handlePaymentAuthorizationWithPayment:(PKPayment *)payment completion:(void (^)(PKPaymentAuthorizationStatus))completion {
     
@@ -164,11 +199,15 @@
     }];
 }
  
- 
- - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller {
+
+
+ - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller
+{
      CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"user cancelled apple pay"];
      [self.commandDelegate sendPluginResult:result callbackId:callbackId];
      [self.viewController dismissViewControllerAnimated:YES completion:nil];
  }
- 
+
+
+
 @end

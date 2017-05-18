@@ -28,22 +28,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	        </feature>
         </config-file>
         
-        <preference name="STRIPE_PUBLISHABLE_KEY" default=" " />
-		<config-file target="*-Info.plist" parent="StripePublishableKey">
-            <string>$STRIPE_PUBLISHABLE_KEY</string>
-        </config-file>
-        
-        
-        <preference name="APPLE_PAY_MERCHANT" default=" " />
-		<config-file target="*-Info.plist" parent="ApplePayMerchant">
-            <string>$APPLE_PAY_MERCHANT</string>
-        </config-file>
-        <config-file target="*.entitlements" parent="com.apple.developer.in-app-payments">
-			<array>
-				<string>$APPLE_PAY_MERCHANT</string>
-			</array>
-        </config-file>
-        
         <framework src="src/ios/Stripe.framework" custom="true" embed="true" />
         <framework src="AddressBook.framework" />
         <framework src="PassKit.framework" />

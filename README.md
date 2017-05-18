@@ -9,9 +9,7 @@ This plugin is a basic implementation of Stripe and Apple Pay with the purpose o
 2. In your Xcode project, go to **Capabilities** and enable **Apple Pay**
 3. Install the plugin
 ```sh
-cordova plugin add https://github.com/mtshare/cordova-plugin-applepay  \
-	--variable STRIPE_PUBLISHABLE_KEY="pk_test_stripekey" \
-	--variable APPLE_PAY_MERCHANT="merchant.apple.test"
+cordova plugin add https://github.com/mtshare/cordova-plugin-applepay
 ```
 
 ## Supported Platforms
@@ -63,13 +61,13 @@ ApplePay.getStripeToken(amount, description, currency, successCallback, errorCal
 ##### Response
 ```json
 {
-	"token": "sometoken",
+	"id": "tok_STRIPE_TOKEN",
 	"card": {
-		"id": "cardid",
-		"brand": "Visa",
+		"id": "card_CARD_ID",
+		"brand": "MasterCard",
 		"last4": "1234",
-		"exp_month": "01",
-		"exp_year": "2050"
+		"exp_year": "2050",
+		"exp_month": "6"
 	}
 }
 ```
@@ -81,11 +79,11 @@ ApplePay.setMerchantId('merchant.apple.test');
 
 ApplePay.getAllowsApplePay(function() {
 
-	ApplePay.getStripeToken(function(token) {
-		alert('Your token is: ' + token.id);
+	ApplePay.getStripeToken('10.00', 'Delicious Cake', 'USD', function(results) {
+		alert('Your token is: ' + results.id);
 	}, function() {
 		alert('Error getting payment info');
-	}, '10.00', 'Delicious Cake', 'USD');
+	});
 
 }, function() {
 	alert('User does not have apple pay available');

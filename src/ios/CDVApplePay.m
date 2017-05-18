@@ -178,7 +178,8 @@
                                                      
                                                      completion(PKPaymentAuthorizationStatusSuccess);
                                                      
-                                                     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary: message];
+                                                     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                                                                             messageAsDictionary:message];
                                                      [self.commandDelegate sendPluginResult:result
                                                                                  callbackId:callbackId];
                                                  }

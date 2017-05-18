@@ -17,7 +17,7 @@
 #endif
     
     publishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripePublishableKey"];
-    if ([StripePublishableKey length]) {
+    if ([publishableKey length]) {
         [Stripe setDefaultPublishableKey:publishableKey];
     }
     merchantId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"ApplePayMerchant"];

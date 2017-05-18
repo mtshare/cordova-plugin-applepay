@@ -46,7 +46,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 			</array>
         </config-file>
 		
-		<framework src="src/ios/Stripe.framework" custom="true" />
+		<framework src="src/ios/Stripe.framework" custom="true" embed="true" />
         <framework src="AddressBook.framework" />
         <framework src="PassKit.framework" />
         <framework src="Foundation.framework" />

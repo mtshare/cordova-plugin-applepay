@@ -79,7 +79,11 @@ ApplePay.setMerchantId('merchant.apple.test');
 
 ApplePay.getAllowsApplePay(function() {
 
-	ApplePay.getStripeToken('10.00', 'Delicious Cake', 'USD', function(results) {
+	ApplePay.getStripeToken({
+		amount: '10.00',
+		description:  'Delicious Cake',
+		currency: 'USD'
+	}, function(results) {
 		alert('Your token is: ' + results.id);
 	}, function() {
 		alert('Error getting payment info');

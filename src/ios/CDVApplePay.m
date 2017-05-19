@@ -54,8 +54,7 @@
         return [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
     }
     
-    NSArray *paymentNetworks = @[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel];
-    if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:paymentNetworks]) {
+    if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel]]) {
         //  Pay is available!
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
                                                     messageAsString:@"User has Apple Pay"];
@@ -90,11 +89,11 @@
     paymentRequest.currencyCode = [command.arguments objectAtIndex:2];
     
     // Configure your request here.
-    NSString *label = [command.arguments objectAtIndex:1];
-    NSString *amountString = [NSString stringWithFormat:@"%f", [[command.arguments objectAtIndex:0] floatValue]];
+    NSDictionary *arguments = [command.arguments objectAtIndex:0];
+    NSString *amountString = [NSString stringWithFormat:@"%f", [arguments[@"amount"] floatValue]];
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:amountString];
     paymentRequest.paymentSummaryItems = @[
-                                           [PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]
+                                           [PKPaymentSummaryItem summaryItemWithLabel:arguments[@"description"] amount:amount]
                                            ];
     
     callbackId = command.callbackId;

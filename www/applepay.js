@@ -33,15 +33,15 @@ var ApplePay = {
     getStripeToken: function(infos, successCallback, errorCallback) {
         if(typeof infos === 'undefined' || infos.amount === 'undefined') return false;
 
-        if (infos.description === 'undefined') infos.description = 'ApplePay Payment';
-        if (infos.currency === 'undefined') infos.currency = 'EUR';
+        if (typeof infos.description === 'undefined') infos.description = 'ApplePay Payment';
+        if (typeof infos.currency === 'undefined') infos.currency = 'EUR';
 
         cordova.exec(
             successCallback,
             errorCallback,
             'ApplePay',
             'getStripeToken',
-            [infos.amount, infos.description, infos.currency]
+            [infos]
         );
     }
     

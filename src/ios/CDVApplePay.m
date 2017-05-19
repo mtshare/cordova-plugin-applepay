@@ -81,16 +81,16 @@
     }
     
     NSString *countryCode = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
+    NSDictionary *arguments = [command.arguments objectAtIndex:0];
     
     PKPaymentRequest *paymentRequest = [Stripe paymentRequestWithMerchantIdentifier:merchantId];
     paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
     paymentRequest.supportedNetworks = @[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel];
     paymentRequest.countryCode = countryCode;
-    paymentRequest.currencyCode = [command.arguments objectAtIndex:2];
+    paymentRequest.currencyCode = arguments[@"currency"];
     
     // Configure your request here.
-    NSDictionary *arguments = [command.arguments objectAtIndex:0];
-    NSString *amountString = [NSString stringWithFormat:@"%f", [arguments[@"amount"] floatValue]];
+    NSString *amountString = [NSString stringWithFormat:@"%.02f", [arguments[@"amount"] floatValue]];
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:amountString];
     paymentRequest.paymentSummaryItems = @[
                                            [PKPaymentSummaryItem summaryItemWithLabel:arguments[@"description"] amount:amount]

@@ -28,7 +28,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	        </feature>
         </config-file>
         
-        <framework src="src/ios/Stripe.framework" custom="true" embed="true" />
+        <framework src="src/ios/Stripe.framework" custom="true" />
         <framework src="AddressBook.framework" />
         <framework src="PassKit.framework" />
         <framework src="Foundation.framework" />

@@ -34,6 +34,9 @@
 
 
 
+/**
+ * Set Apple merchant ID
+ */
 - (void)setMerchantId:(CDVInvokedUrlCommand*)command
 {
     merchantId = [command.arguments objectAtIndex:0];
@@ -48,21 +51,16 @@
 
 - (void)getAllowsApplePay:(CDVInvokedUrlCommand*)command
 {
-    if (merchantId == nil) {
-        CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                    messageAsString:@"Please call setMerchantId() with your Apple-given merchant ID."];
-        return [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-    }
-    
     if ([PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[PKPaymentNetworkMasterCard, PKPaymentNetworkVisa, PKPaymentNetworkPrivateLabel]]) {
         //  Pay is available!
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                                    messageAsString:@"User has Apple Pay"];
+                                                    messageAsString:@"Apple Pay is available on this device!"];
         [self.commandDelegate sendPluginResult:result
                                     callbackId:command.callbackId];
     } else {
+        //  Pay is NOT available!
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                    messageAsString:@"User does not have Apple Pay"];
+                                                    messageAsString:@"Apple Pay is not available on this device!"];
         [self.commandDelegate sendPluginResult:result
                                     callbackId:command.callbackId];
     }
@@ -74,6 +72,7 @@
 
 - (void)getStripeToken:(CDVInvokedUrlCommand*)command
 {
+    // Check if merchant ID is set
     if (merchantId == nil) {
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
                                                     messageAsString:@"Please call setMerchantId() with your Apple-given merchant ID."];

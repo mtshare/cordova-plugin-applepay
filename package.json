@@ -1,38 +1,35 @@
 {
-  "name": "cordova-plugin-applepay",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mtshare/cordova-plugin-applepay.git"
-  },
-  "keywords": [
-    "ecosystem:cordova",
-    "cordova-ios"
-  ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0.0"
-    }
-  ],
-  "dependencies": {
-    "cordova": "*"
-  },
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-cordovacli": "*"
-  },
-  "author": "Marco Cristalli <marcocristalli.app@gmail.com> (https://github.com/mtshare)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mtshare/cordova-plugin-applepay/issues"
-  },
-  "homepage": "https://github.com/mtshare/cordova-plugin-applepay#readme",
-  "description": "Implements Stripe/ApplePay Stuff.",
-  "cordova": {
-    "id": "cordova-plugin-applepay",
-    "platforms": [
-      "ios"
-    ]
-  }
+	"name": "cordova-plugin-applepay",
+	"version": "1.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mtshare/cordova-plugin-applepay.git"
+	},
+	"keywords": [
+		"ecosystem:cordova",
+		"cordova-ios"
+	],
+	"engines": [
+		{
+			"name": "cordova",
+			"version": ">=3.0.0"
+		}
+	],
+	"dependencies": {
+		"cordova": "*"
+	},
+	"devDependencies": {},
+	"author": "Marco Cristalli <marcocristalli.app@gmail.com> (https://github.com/mtshare)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mtshare/cordova-plugin-applepay/issues"
+	},
+	"homepage": "https://github.com/mtshare/cordova-plugin-applepay#readme",
+	"description": "Implements Stripe/ApplePay Stuff.",
+	"cordova": {
+		"id": "cordova-plugin-applepay",
+		"platforms": [
+			"ios"
+		]
+	}
 }

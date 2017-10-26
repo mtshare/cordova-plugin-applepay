@@ -12,8 +12,21 @@
     NSString *callbackId;
 }
 
+/**
+ * Set Apple merchant ID
+ */
 - (void)setMerchantId:(CDVInvokedUrlCommand*)command;
+
+
+/**
+ * Check if Apple Pay is available
+ */
 - (void)getAllowsApplePay:(CDVInvokedUrlCommand*)command;
+
+
+/**
+ * Retrive Stripe Token
+ */
 - (void)getStripeToken:(CDVInvokedUrlCommand*)command;
 
 @end

@@ -52,7 +52,7 @@ ApplePay.setStripePublishableKey('pk_test_stripekey', successCallback, errorCall
 Request a stripe token for an Apple Pay card. 
 - amount (string)
 - description (string)
-- currency (uppercase string)
+- currency (uppercase string) [EUR, USD, etc...]
 
 ```js
 ApplePay.getStripeToken(amount, description, currency, successCallback, errorCallback);

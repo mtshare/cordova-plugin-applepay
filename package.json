@@ -7,7 +7,11 @@
 	},
 	"keywords": [
 		"ecosystem:cordova",
-		"cordova-ios"
+		"cordova-ios",
+		"ionic",
+		"ionic2",
+		"applepay",
+		"stripe"
 	],
 	"engines": [
 		{
@@ -18,7 +22,8 @@
 	"dependencies": {
 		"cordova": "*"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+	},
 	"author": "Marco Cristalli <marcocristalli.app@gmail.com> (https://github.com/mtshare)",
 	"license": "MIT",
 	"bugs": {
@@ -31,5 +36,11 @@
 		"platforms": [
 			"ios"
 		]
+	},
+	"scripts": {
+		"build": "rm -rf node_modules && ngc",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+		"postchangelog": "git commit -am \"chore(): update changelog\"",
+		"shipit": "npm run build && npm publish"
 	}
 }

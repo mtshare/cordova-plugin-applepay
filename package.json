@@ -41,6 +41,7 @@
 		"build": "rm -rf node_modules",
 		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
 		"postchangelog": "git commit -am \"chore(): update changelog\"",
-		"shipit": "npm run build && npm publish"
+		"shipit": "npm run build && npm publish",
+		"dsstoreclean": "find . -name '.DS_Store' -type f -delete"
 	}
 }

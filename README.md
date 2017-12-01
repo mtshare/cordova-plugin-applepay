@@ -30,6 +30,7 @@ cordova plugin add https://github.com/mtshare/cordova-plugin-applepay
 - ApplePay.getAllowsApplePay
 - ApplePay.setMerchantId
 - ApplePay.setStripePublishableKey
+- ApplePay.openPaymentSetup
 - ApplePay.getStripeToken
 
 #### ApplePay.getAllowsApplePay
@@ -54,6 +55,14 @@ Set your Stripe Publishable Key. This overrides the value obtained from **Stripe
 
 ```js
 ApplePay.setStripePublishableKey('pk_test_stripekey', successCallback, errorCallback);
+```
+
+#### ApplePay.openPaymentSetup
+
+Move the user to the interface for adding credit cards. This will open up the Wallet app on iPhone or to the Settings app on iPad. If the device does not support Apple Pay, this does nothing.
+
+```js
+ApplePay.openPaymentSetup();
 ```
 
 #### ApplePay.getStripeToken

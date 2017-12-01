@@ -36,6 +36,14 @@ module.exports = {
 
 
     /**
+     * Open payment setup
+     */
+    openPaymentSetup: function() {
+        exec(null, null, 'ApplePay', 'openPaymentSetup', []);
+    },
+
+
+    /**
      * Retrive Stripe token
      * @param  {object} infos
      * {

@@ -59,6 +59,16 @@
 
 
 
+/**
+ * Open payment setup
+ */
+- (void)openPaymentSetup:(CDVInvokedUrlCommand*)command
+{
+    PKPassLibrary* lib = [[PKPassLibrary alloc] init];
+    [lib openPaymentSetup];
+}
+
+
 
 - (void)getAllowsApplePay:(CDVInvokedUrlCommand*)command
 {

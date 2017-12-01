@@ -19,6 +19,12 @@
 
 
 /**
+ * Open payment setup
+ */
+-(void)openPaymentSetup:(CDVInvokedUrlCommand*)command;
+
+
+/**
  * Check if Apple Pay is available
  */
 - (void)getAllowsApplePay:(CDVInvokedUrlCommand*)command;

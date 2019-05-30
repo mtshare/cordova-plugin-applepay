@@ -4,11 +4,20 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>da.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eWvHkx4fkRQ2ruHXkrVUcv8u0dc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ehpV9z0dlIEtfXqK9aswtvNI4fY=
+			6WGF+q+yzuP2a7SZ+fOUedfkxz0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -17,7 +26,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gMJz8XYvc9NQy5D/7hTJUzAFAUs=
+			1qT2U8cRl+9a2Mx3CrWOE65XL1E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es-AR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z/x9QDz97Mjif7h4I2Y77jaENuk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +44,25 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DT0Uj69dVeJPLArUUN9g358i38k=
+			L0/g832dIm6EbTjs/1H5hEi7Q6k=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fi.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7hEn56QC2g/GzvMmJQdUuwZfS5k=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr-CA.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			haM8uBJF2jtqcqOF6QACT2Li02s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +71,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NFrcmbshU9WTTJCie4EVzwvOueM=
+			urPHgIQQxzUn9EX8qSD/FFggz2I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,7 +80,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xLQWfrZ5rhOPOaG1P8qKnGFcKNw=
+			Bvia3S0+DSSOiibk0rKVVH5e3Dk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +89,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UPNLtnt+DJOaBeu7FpukWbTdAVM=
+			RCJeAePVLCj+4bAUsusEc+0VhXI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fQknIP8nIQ4lIWJ5dNigsBjtkrE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,7 +107,34 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ceuc6O+XHE5ndm+lYA0RkYGJShU=
+			cfRVdEBBhRC5244QddOXaslc724=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn-NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HdIEGhXm7o6NeEcU1Hs1FlR2CaU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NDzIgz0Zxx/84n4GK8IJuLOd6gE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt-PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pDecOpUyVjEutV3sdgYCO15o298=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -199,6 +271,18 @@
 		<data>
 		redAbFzaqrp3lChrlvbdnBDmnnM=
 		</data>
+		<key>stp_card_form_amex_cvc.png</key>
+		<data>
+		kmLNceloth5Yi+54uvW85CJM3LQ=
+		</data>
+		<key>stp_card_form_amex_cvc@2x.png</key>
+		<data>
+		AJhOmTg7dAzBG+9VRDJRYYsHpqE=
+		</data>
+		<key>stp_card_form_amex_cvc@3x.png</key>
+		<data>
+		3D5K4rKJHESptwJHsYgK+lGdpdo=
+		</data>
 		<key>stp_card_form_back.png</key>
 		<data>
 		arYL6258S9MXvJjFsCCEt9TDc4c=
@@ -270,6 +354,54 @@
 		<key>stp_card_mastercard_template@3x.png</key>
 		<data>
 		uF0rsVBHgkVIxcGMiVLJdfqnsUA=
+		</data>
+		<key>stp_card_unionpay_en.png</key>
+		<data>
+		3uufKjiL1Pzq94fJBAh9JmnuRek=
+		</data>
+		<key>stp_card_unionpay_en@2x.png</key>
+		<data>
+		yk+DF/UcRHnpjxTfgL26o+slVJE=
+		</data>
+		<key>stp_card_unionpay_en@3x.png</key>
+		<data>
+		N/sDh8yqACx6p912KUh+gmk02gI=
+		</data>
+		<key>stp_card_unionpay_template_en.png</key>
+		<data>
+		DBT0C+eAyvtS9+kMVPFusDkIkto=
+		</data>
+		<key>stp_card_unionpay_template_en@2x.png</key>
+		<data>
+		2XYWwghx/XNgfKFKGkkb3U3AGTs=
+		</data>
+		<key>stp_card_unionpay_template_en@3x.png</key>
+		<data>
+		N3fDPctpEY0oVbeO/NK+9acGKLs=
+		</data>
+		<key>stp_card_unionpay_template_zh.png</key>
+		<data>
+		9Zi865VjPwtQCjjFGumCxDFVvy4=
+		</data>
+		<key>stp_card_unionpay_template_zh@2x.png</key>
+		<data>
+		NrT+MNKDDBNwji7M1E/vb4yPnmc=
+		</data>
+		<key>stp_card_unionpay_template_zh@3x.png</key>
+		<data>
+		xLDnj5hCOXKSNUAwjRNuxAv2cH4=
+		</data>
+		<key>stp_card_unionpay_zh.png</key>
+		<data>
+		NpnrpH46Kqm3a89H2H8c9llv2UI=
+		</data>
+		<key>stp_card_unionpay_zh@2x.png</key>
+		<data>
+		nje4YeyNrjwCZcL/ep6BwQng9l4=
+		</data>
+		<key>stp_card_unionpay_zh@3x.png</key>
+		<data>
+		oHQH0iV2XaPX3DN9bR9XehocsdA=
 		</data>
 		<key>stp_card_unknown.png</key>
 		<data>
@@ -343,11 +475,20 @@
 		<data>
 		nmDDwoJPaMVz7b0hIOy008ZVKgU=
 		</data>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LXCQLT3suQ5KakMEeSfgA3w1M5Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			apiiIaa++xiG3lsbX0RGKoWNVMY=
+			OGMGTV3U87g2R9LrWNel0f6ONQE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -355,15 +496,28 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>da.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eWvHkx4fkRQ2ruHXkrVUcv8u0dc=
+			</data>
+			<key>hash2</key>
+			<data>
+			m7J7ozESGmlzFw7fFX54nOMBeoqWqFwfXjXqiXMYj9U=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ehpV9z0dlIEtfXqK9aswtvNI4fY=
+			6WGF+q+yzuP2a7SZ+fOUedfkxz0=
 			</data>
 			<key>hash2</key>
 			<data>
-			LKHXTHIpZht/jDwdJ0b8ELBLMW7ioFynpekPlTTbxFs=
+			6gHSnrIpzFzf0SuYSOpShsRUkscrfCiqerDq6P69sfA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -372,11 +526,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gMJz8XYvc9NQy5D/7hTJUzAFAUs=
+			1qT2U8cRl+9a2Mx3CrWOE65XL1E=
 			</data>
 			<key>hash2</key>
 			<data>
-			VbZrRVfD2xNCLowz3Q1gxWIbFudjgn4LgUR4HxEHtbE=
+			xRI3rxW8Gn2Gs33xuOoSBfRWBp/3kUQO19tQq3Dx0Ds=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es-AR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z/x9QDz97Mjif7h4I2Y77jaENuk=
+			</data>
+			<key>hash2</key>
+			<data>
+			OV7rJMSLl/YbRDQwYds9mpCo5Tt7yF/5lZIlzbPNoxY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -385,11 +552,37 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DT0Uj69dVeJPLArUUN9g358i38k=
+			L0/g832dIm6EbTjs/1H5hEi7Q6k=
 			</data>
 			<key>hash2</key>
 			<data>
-			IE/R5vpZq4EERIq4OOi5ft5IbyTZ37LiqwvUJJ16i+E=
+			aP/NxbYkmYvQas+AekIgEda6MObThsjOhSi7OzBSAI8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fi.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7hEn56QC2g/GzvMmJQdUuwZfS5k=
+			</data>
+			<key>hash2</key>
+			<data>
+			J2bDDLOtCD7AlAV/nPHaxKcPvsFzX9loVmFtPs9VcfU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr-CA.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			haM8uBJF2jtqcqOF6QACT2Li02s=
+			</data>
+			<key>hash2</key>
+			<data>
+			bxE0vWqjBHwg+P+MPEClpUQ4qvAVrd9cy0OWlfpQxwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -398,11 +591,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NFrcmbshU9WTTJCie4EVzwvOueM=
+			urPHgIQQxzUn9EX8qSD/FFggz2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			D/p3u8HjDZb1QydXudEG0/TtjPZvWMUg6ZcTxB5bhyg=
+			T/0W1I3RJK05Z/p86GwWcdSYxKoLShi8Bu6mj4Evs0o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -411,11 +604,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xLQWfrZ5rhOPOaG1P8qKnGFcKNw=
+			Bvia3S0+DSSOiibk0rKVVH5e3Dk=
 			</data>
 			<key>hash2</key>
 			<data>
-			fY8GTi5QXyTJbK/cJ+7/aZABGeRFZVFGa3ulJdNzNnc=
+			PYt1e4tD9Lj93RBZqNqt9w7eAijbSaQSJkJ8IrC4ZVU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -424,11 +617,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UPNLtnt+DJOaBeu7FpukWbTdAVM=
+			RCJeAePVLCj+4bAUsusEc+0VhXI=
 			</data>
 			<key>hash2</key>
 			<data>
-			sl0D25l5RmSl813peKs4jxXe/faWZT+T3kdYQF3dqPg=
+			UiYmUZR7+L+OVKVWhTqPkoaOhAs05p0HN4S9ldKnvJo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fQknIP8nIQ4lIWJ5dNigsBjtkrE=
+			</data>
+			<key>hash2</key>
+			<data>
+			dfQcUsuWysbWIcjN6LX+5l4meGZKO5uTPT6if46q4pQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -437,11 +643,50 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ceuc6O+XHE5ndm+lYA0RkYGJShU=
+			cfRVdEBBhRC5244QddOXaslc724=
 			</data>
 			<key>hash2</key>
 			<data>
-			SZGZw8hacUW/4ybWbbcgPTyGWeIgILV0oP8O1MOuRVs=
+			Paf9yZ+pVdWheDdjqD+jFKU9NIjINJWvd0uVEIy+VDA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn-NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HdIEGhXm7o6NeEcU1Hs1FlR2CaU=
+			</data>
+			<key>hash2</key>
+			<data>
+			TVl7JD0NLQqM2BqXEQDywRgtRUarTX4YIgKz4BDlxZo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NDzIgz0Zxx/84n4GK8IJuLOd6gE=
+			</data>
+			<key>hash2</key>
+			<data>
+			IUqvuBNOnnagIhLYxy7ULHSR9MCW3uQI6okgVqcwwyU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt-PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pDecOpUyVjEutV3sdgYCO15o298=
+			</data>
+			<key>hash2</key>
+			<data>
+			F/pOyEbBAEDJIXimWSwAbngDOmLp+wGT0N1lgkLZybU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -809,6 +1054,39 @@
 			9HLHkRWk+g3KQmA/0D3j7TzUJikBkyfRbl4R6dvjUDk=
 			</data>
 		</dict>
+		<key>stp_card_form_amex_cvc.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kmLNceloth5Yi+54uvW85CJM3LQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Hk9eaVRSP/Qhaa9i6Fg1sZHEhjcE0HVhdiD6Tj6Saec=
+			</data>
+		</dict>
+		<key>stp_card_form_amex_cvc@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AJhOmTg7dAzBG+9VRDJRYYsHpqE=
+			</data>
+			<key>hash2</key>
+			<data>
+			BlSrhvncTx3sCU0rozRabTL7JREd15nuZJtCw7TrGcM=
+			</data>
+		</dict>
+		<key>stp_card_form_amex_cvc@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3D5K4rKJHESptwJHsYgK+lGdpdo=
+			</data>
+			<key>hash2</key>
+			<data>
+			0NdWXGKJjeqWOHpA4A83UnsyWb8mytJvsdxpg1rwXVA=
+			</data>
+		</dict>
 		<key>stp_card_form_back.png</key>
 		<dict>
 			<key>hash</key>
@@ -1005,6 +1283,138 @@
 			<key>hash2</key>
 			<data>
 			fpk6Bssrfl5k/cM4EuxPVfLvP8mqNLXXL3RbDorvmZ0=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_en.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3uufKjiL1Pzq94fJBAh9JmnuRek=
+			</data>
+			<key>hash2</key>
+			<data>
+			gnTD/kjMxG0t6Godua1iDNRmfrTffFLPdfPDvEa4+PE=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_en@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yk+DF/UcRHnpjxTfgL26o+slVJE=
+			</data>
+			<key>hash2</key>
+			<data>
+			UDNT6gRgQLwaAFC+czZnPs/GUTT6gPArF49gqzzIGkg=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_en@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			N/sDh8yqACx6p912KUh+gmk02gI=
+			</data>
+			<key>hash2</key>
+			<data>
+			YvwAUewEtTJBiMBg6AYaB8cSbpmO6YynToILQMbDxRM=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_en.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DBT0C+eAyvtS9+kMVPFusDkIkto=
+			</data>
+			<key>hash2</key>
+			<data>
+			iv+9UGuXzfXtPXCUdjqF7gA+V0k40+u05HDFdivYr7w=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_en@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2XYWwghx/XNgfKFKGkkb3U3AGTs=
+			</data>
+			<key>hash2</key>
+			<data>
+			rhdv8Mj6ROA7A8k/ME/YPCFbdidWheArmdtE87WNP6c=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_en@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			N3fDPctpEY0oVbeO/NK+9acGKLs=
+			</data>
+			<key>hash2</key>
+			<data>
+			7HpiNEU8gtcAtRdM/WW38JEftfOMRl6yCz4ne3C3Xj0=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_zh.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9Zi865VjPwtQCjjFGumCxDFVvy4=
+			</data>
+			<key>hash2</key>
+			<data>
+			gaGSi7VIIbpivRpZFu4U70xfFMS1cixxUw3/4yFdZRo=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_zh@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NrT+MNKDDBNwji7M1E/vb4yPnmc=
+			</data>
+			<key>hash2</key>
+			<data>
+			RF2WSaIqQJak41QjiVsoTltvRTiyJ1W50g3RTOaNDUU=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_template_zh@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xLDnj5hCOXKSNUAwjRNuxAv2cH4=
+			</data>
+			<key>hash2</key>
+			<data>
+			q7QroO3coqb5CHm8XUL4EwzRbtw/dlUM1ZWCOXcUHXg=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_zh.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NpnrpH46Kqm3a89H2H8c9llv2UI=
+			</data>
+			<key>hash2</key>
+			<data>
+			NiBj/4tW2+ECyBQhjHkjix3RZO08K+t73l4cS8AGQ7o=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_zh@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nje4YeyNrjwCZcL/ep6BwQng9l4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lt7n/Zps9amBfAoJKvzsWUeLFyfrF5adrcMlUFLLaLQ=
+			</data>
+		</dict>
+		<key>stp_card_unionpay_zh@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oHQH0iV2XaPX3DN9bR9XehocsdA=
+			</data>
+			<key>hash2</key>
+			<data>
+			lVyp4JIdZW5tEsKff3t4xawaAXArspwtfuveJSTOkDs=
 			</data>
 		</dict>
 		<key>stp_card_unknown.png</key>
@@ -1205,15 +1615,28 @@
 			QL1PnjZXC/UmoVdYEy+oJzmchonnpA1wuFRVfdD+qQE=
 			</data>
 		</dict>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LXCQLT3suQ5KakMEeSfgA3w1M5Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			lPxcEpNxLZiBvnfvwjuW/IU8NWO44M+HPZy7kXWOLzI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			apiiIaa++xiG3lsbX0RGKoWNVMY=
+			OGMGTV3U87g2R9LrWNel0f6ONQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			LqivbtbrmBrJACFqYyQmU/SDLmAIk5kfMdtMg2o2mJA=
+			S4K/sZWHt6Sln8c/T/rrFRLtAWCXQXn7EgHkk/DSffU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1221,7 +1644,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -1252,24 +1675,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -1305,13 +1716,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

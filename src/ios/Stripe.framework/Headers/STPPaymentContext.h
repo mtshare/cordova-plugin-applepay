@@ -13,14 +13,14 @@
 #import "STPAddress.h"
 #import "STPBlocks.h"
 #import "STPPaymentConfiguration.h"
-#import "STPPaymentMethod.h"
+#import "STPPaymentOption.h"
 #import "STPPaymentResult.h"
 #import "STPUserInformation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class STPPaymentContext, STPAPIClient, STPTheme, STPCustomerContext;
-@protocol STPBackendAPIAdapter, STPPaymentMethod, STPPaymentContextDelegate;
+@protocol STPBackendAPIAdapter, STPPaymentOption, STPPaymentContextDelegate;
 
 /**
  An `STPPaymentContext` keeps track of all of the state around a payment. It will manage fetching a user's saved payment methods, tracking any information they select, and prompting them for required additional information before completing their purchase. It can be used to power your application's "payment confirmation" page with just a few lines of code.
@@ -137,14 +137,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL loading;
 
 /**
- The user's currently selected payment method. May be nil.
+ The user's currently selected payment option. May be nil.
  */
-@property (nonatomic, readonly, nullable) id<STPPaymentMethod> selectedPaymentMethod;
+@property (nonatomic, readonly, nullable) id<STPPaymentOption> selectedPaymentOption;
 
 /**
- The available payment methods the user can choose between. May be nil.
+ The available payment options the user can choose between. May be nil.
  */
-@property (nonatomic, readonly, nullable) NSArray<id<STPPaymentMethod>> *paymentMethods;
+@property (nonatomic, readonly, nullable) NSArray<id<STPPaymentOption>> *paymentOptions;
 
 /**
  The user's currently selected shipping method. May be nil.
@@ -234,14 +234,29 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) UIModalPresentationStyle modalPresentationStyle;
 
 /**
- A view that will be placed as the footer of the payment methods selection 
+ The mode to use when displaying the title of the navigation bar in all view
+ controllers presented by the context. The default value is `automatic`,
+ which causes the title to use the same styling as the previously displayed
+ navigation item (if the view controller is pushed onto the `hostViewController`).
+
+ If the `prefersLargeTitles` property of the `hostViewController`'s navigation bar
+ is false, this property has no effect and the navigation item's title is always
+ displayed as a small title.
+
+ If the view controller is presented modally, `automatic` and
+ `never` always result in a navigation bar with a small title.
+ */
+@property (nonatomic, assign) UINavigationItemLargeTitleDisplayMode largeTitleDisplayMode NS_AVAILABLE_IOS(11_0);
+
+/**
+ A view that will be placed as the footer of the payment options selection
  view controller.
 
  When the footer view needs to be resized, it will be sent a
  `sizeThatFits:` call. The view should respond correctly to this method in order
  to be sized and positioned properly.
  */
-@property (nonatomic, strong) UIView *paymentMethodsViewControllerFooterView;
+@property (nonatomic, strong) UIView *paymentOptionsViewControllerFooterView;
 
 /**
  A view that will be placed as the footer of the add card view controller.
@@ -252,6 +267,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIView *addCardViewControllerFooterView;
 
+
+
 /**
  If `paymentContext:didFailToLoadWithError:` is called on your delegate, you
  can in turn call this method to try loading again (if that hasn't been called, 
@@ -261,24 +278,24 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)retryLoading;
 
 /**
- This creates, configures, and appropriately presents an `STPPaymentMethodsViewController` 
+ This creates, configures, and appropriately presents an `STPPaymentOptionsViewController` 
  on top of the payment context's `hostViewController`. It'll be dismissed automatically 
  when the user is done selecting their payment method.
 
  @note This method will do nothing if it is called while STPPaymentContext is 
        already showing a view controller or in the middle of requesting a payment.
  */
-- (void)presentPaymentMethodsViewController;
+- (void)presentPaymentOptionsViewController;
 
 /**
- This creates, configures, and appropriately pushes an `STPPaymentMethodsViewController` 
+ This creates, configures, and appropriately pushes an `STPPaymentOptionsViewController` 
  onto the navigation stack of the context's `hostViewController`. It'll be popped 
  automatically when the user is done selecting their payment method.
 
  @note This method will do nothing if it is called while STPPaymentContext is
        already showing a view controller or in the middle of requesting a payment.
  */
-- (void)pushPaymentMethodsViewController;
+- (void)pushPaymentOptionsViewController;
 
 /**
  This creates, configures, and appropriately presents a view controller for 
@@ -337,7 +354,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)paymentContext:(STPPaymentContext *)paymentContext didFailToLoadWithError:(NSError *)error;
 
 /**
- This is called every time the contents of the payment context change. When this is called, you should update your app's UI to reflect the current state of the payment context. For example, if you have a checkout page with a "selected payment method" row, you should update its payment method with `paymentContext.selectedPaymentMethod.label`. If that checkout page has a "buy" button, you should enable/disable it depending on the result of `[paymentContext isReadyForPayment]`.
+ This is called every time the contents of the payment context change. When this is called, you should update your app's UI to reflect the current state of the payment context. For example, if you have a checkout page with a "selected payment method" row, you should update its payment method with `paymentContext.selectedPaymentOption.label`. If that checkout page has a "buy" button, you should enable/disable it depending on the result of `[paymentContext isReadyForPayment]`.
 
  @param paymentContext the payment context that changed
  */
@@ -371,7 +388,9 @@ didCreatePaymentResult:(STPPaymentResult *)paymentResult
  You should call the completion block with the results of your validation
  and the available shipping methods for the given address. If you don't implement
  this method, the user won't be prompted to select a shipping method and all
- addresses will be valid.
+ addresses will be valid. If you call the completion block with nil or an
+ empty array of shipping methods, the user won't be prompted to select a
+ shipping method.
 
  @note If a user updates their shipping address within the Apple Pay dialog,
  this address will be anonymized. For example, in the US, it will only include the
@@ -381,7 +400,10 @@ didCreatePaymentResult:(STPPaymentResult *)paymentResult
 
  @param paymentContext  The context that updated its shipping address
  @param address The current shipping address
- @param completion      Call this block when you're done validating the shipping address and calculating available shipping methods.
+ @param completion      Call this block when you're done validating the shipping
+ address and calculating available shipping methods. If you call the completion
+ block with nil or an empty array of shipping methods, the user won't be prompted
+ to select a shipping method.
  */
 - (void)paymentContext:(STPPaymentContext *)paymentContext
 didUpdateShippingAddress:(STPAddress *)address

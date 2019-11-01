@@ -11,6 +11,15 @@ This plugin is a basic implementation of Stripe and Apple Pay with the purpose o
 ```sh
 cordova plugin add https://github.com/mtshare/cordova-plugin-applepay
 ```
+4. Add your **Stripe publishable key** and **merchant ID** to **config.xml**
+```
+<edit-config file="*-Info.plist" mode="merge" target="StripePublishableKey">
+	<string>pk_test_stripekey</string>
+</edit-config>
+<edit-config file="*-Info.plist" mode="merge" target="ApplePayMerchant">
+	<string>merchant.apple.test</string>
+</edit-config>
+```
 
 ## Supported Platforms
 
@@ -33,7 +42,7 @@ ApplePay.getAllowsApplePay(successCallback, errorCallback);
 
 #### ApplePay.setMerchantId
 
-Set your Apple-given merchant ID. This overrides the value obtained from **ApplePayMerchant** in **Info.plist**.
+Set your Apple-given merchant ID. This overrides the value obtained from **ApplePayMerchant** in **config.xml**.
 
 ```js
 ApplePay.setMerchantId('merchant.apple.test', successCallback, errorCallback);
@@ -41,7 +50,7 @@ ApplePay.setMerchantId('merchant.apple.test', successCallback, errorCallback);
 
 #### ApplePay.setStripePublishableKey
 
-Set your Stripe Publishable Key. This overrides the value obtained from **StripePublishableKey** in **Info.plist**.
+Set your Stripe Publishable Key. This overrides the value obtained from **StripePublishableKey** in **config.xml**.
 
 ```js
 ApplePay.setStripePublishableKey('pk_test_stripekey', successCallback, errorCallback);

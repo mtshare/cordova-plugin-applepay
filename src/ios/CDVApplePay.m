@@ -27,6 +27,12 @@
     publishableKey = [command.arguments objectAtIndex:0];
     [Stripe setDefaultPublishableKey:publishableKey];
     
+    
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
+                                                messageAsString:[NSString stringWithFormat: @"set Stripe publishable key %@", publishableKey]];
+    [self.commandDelegate sendPluginResult:result
+                                callbackId:command.callbackId];
+    
 #ifdef DEBUG
     NSLog(@"ApplePay set Stripe publishable key %@", publishableKey);
 #endif
@@ -41,11 +47,26 @@
 {
     merchantId = [command.arguments objectAtIndex:0];
     
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
+                                                messageAsString:[NSString stringWithFormat: @"set merchant id to %@", merchantId]];
+    [self.commandDelegate sendPluginResult:result
+                                callbackId:command.callbackId];
+    
 #ifdef DEBUG
     NSLog(@"ApplePay set merchant id to %@", merchantId);
 #endif
 }
 
+
+
+/**
+ * Open payment setup
+ */
+- (void)openPaymentSetup:(CDVInvokedUrlCommand*)command
+{
+    PKPassLibrary* lib = [[PKPassLibrary alloc] init];
+    [lib openPaymentSetup];
+}
 
 
 

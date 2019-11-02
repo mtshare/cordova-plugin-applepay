@@ -21,8 +21,8 @@ module.exports = {
      * Setting Stripe publishable key
      * @param {string} publishableKey  Stripe Publishable Key
      */
-    setStripePublishableKey: function (publishableKey) {
-        exec(null, null, 'ApplePay', 'setStripePublishableKey', [publishableKey]);
+    setStripePublishableKey: function (publishableKey, successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'ApplePay', 'setStripePublishableKey', [publishableKey]);
     },
 
     
@@ -30,8 +30,16 @@ module.exports = {
      * Set Apple Marchant ID
      * @param {string} merchantId      Apple merchant ID
      */
-    setMerchantId: function (merchantId) {
-        exec(null, null, 'ApplePay', 'setMerchantId', [merchantId]);
+    setMerchantId: function (merchantId, successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'ApplePay', 'setMerchantId', [merchantId]);
+    },
+
+
+    /**
+     * Open payment setup
+     */
+    openPaymentSetup: function() {
+        exec(null, null, 'ApplePay', 'openPaymentSetup', []);
     },
 
 
